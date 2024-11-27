@@ -11,6 +11,7 @@ const GroqContext = createContext<GroqContextType | undefined>(undefined);
 export function GroqProvider({ children }: { children: React.ReactNode }) {
   const groq = new Groq({
     apiKey: process.env.NEXT_PUBLIC_GROQ_API_KEY!,
+    dangerouslyAllowBrowser: true 
   });
 
   const generateExcuse = async (context: string): Promise<string | null> => {
