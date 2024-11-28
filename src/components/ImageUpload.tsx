@@ -65,7 +65,7 @@ export default function ImageUpload({ onImageProcessed }: Props) {
           ${isDragActive 
             ? 'border-teal-500 bg-teal-900/20' 
             : 'border-[#334155] bg-[#1e293b] hover:border-teal-500'}
-          flex items-center justify-center p-4 cursor-pointer
+          flex items-center justify-center p-2 md:p-4 cursor-pointer
         `}
       >
         <input {...getInputProps()} />
@@ -102,8 +102,8 @@ export default function ImageUpload({ onImageProcessed }: Props) {
           </div>
         ) : (
           <div className="flex flex-col items-center text-gray-400">
-            <Upload className="w-8 h-8 mb-2" />
-            <p className="text-center text-sm md:text-base">
+            <Upload className="w-8 h-4 md:h-8 mb-2" />
+            <p className="text-center text-xs md:text-base">
               {isDragActive 
                 ? 'Drop the image here...' 
                 : 'Drag & drop an image, or click to select'}
