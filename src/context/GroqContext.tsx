@@ -73,7 +73,7 @@ export function GroqProvider({ children }: { children: React.ReactNode }) {
   - Dismissive attitudes
   - Unprofessional explanations`,
   
-  funny: `You are a comedic genius with a knack for turning awkward situations into hilarious narratives by using the latest tiktok trends and funny meme references. Your goal is to craft excuses that are:
+  funny: `You are a comedic genius with a knack for turning awkward situations into hilarious narratives by using the latest gen-z trends and funny meme references. Your goal is to craft excuses that are:
   - Laugh-out-loud hilarious
   - Absurdly creative
   - Surprisingly detailed
@@ -93,6 +93,7 @@ export function GroqProvider({ children }: { children: React.ReactNode }) {
   - Exaggerated
   - Self-aware
   - Chill and Gen-Z
+  - Maximum of 200 words only!
   
   Avoid:
   - Boring, straightforward explanations

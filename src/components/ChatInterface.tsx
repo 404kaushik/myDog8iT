@@ -26,6 +26,8 @@ export default function CoolExcuseGenerator() {
   const [showInitialMessage, setShowInitialMessage] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const { generateExcuse } = useGroq();
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });

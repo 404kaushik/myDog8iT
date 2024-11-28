@@ -6,3 +6,4 @@ export interface Message {
     role: 'user' | 'assistant';
     tone?: ExcuseTone;
 }
+
