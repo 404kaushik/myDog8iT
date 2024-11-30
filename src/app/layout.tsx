@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI Excuse Generator",
+  title: "myDog8it",
   description: "Generate sophisticated excuses with AI",
 };
 
