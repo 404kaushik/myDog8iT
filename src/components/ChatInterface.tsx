@@ -247,15 +247,16 @@ export default function CoolExcuseGenerator() {
 
         {/* Mobile Sidebar */}
         <MobileSidebar />
-
+            
         {/* Chat Area */}
         <div className="col-span-1 md:col-span-2 flex flex-col h-[88vh] md:h-full overflow-y-auto">
+          
           {/* Messages Section */}
           <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-4 bg-[#1e293b]">
             {/* Typewriter Initial Message */}
             <TypewriterMessage 
             text="Which situation are you planning on escaping from today?"
-            isVisible={showInitialMessage && messages.length === 0}
+            isVisible={showInitialMessage}
             />
             <AnimatePresence>
               {messages.map((message, index) => (
