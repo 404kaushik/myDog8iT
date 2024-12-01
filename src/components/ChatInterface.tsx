@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Send, Wand2, Menu, X } from 'lucide-react';
 import { useGroq } from '@/context/GroqContext';
 import MessageBubble from './MessageBubble';
+import Image from 'next/image';
+import Logo from '../../public/mydog8it.png';
 import ImageUpload from './ImageUpload';
 import TypewriterMessage from './TypewriterMessage';
 import { Message, ExcuseTone } from '@/types';
@@ -249,10 +251,24 @@ export default function CoolExcuseGenerator() {
         <MobileSidebar />
             
         {/* Chat Area */}
-        <div className="col-span-1 md:col-span-2 flex flex-col h-[88vh] md:h-full overflow-y-auto">
-          
+        <div className="col-span-1 md:col-span-2 flex flex-col h-[88vh] md:h-full overflow-y-auto">          
           {/* Messages Section */}
           <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-4 bg-[#1e293b]">
+            {/* Placeholder Logo when no messages
+            {messages.length === 0 && showInitialMessage && (
+              <div className="absolute inset-0 flex items-center justify-end pointer-events-none mr-56">
+                <div className="flex flex-col items-center">
+                  <Image 
+                    src={Logo}
+                    alt="mydogateit logo" 
+                    width={200} 
+                    height={200}
+                    className="w-full h-full mb-4"
+                  />
+                  
+                </div>
+              </div>
+            )} */}
             {/* Typewriter Initial Message */}
             <TypewriterMessage 
             text="Which situation are you planning on escaping from today?"
@@ -320,6 +336,19 @@ export default function CoolExcuseGenerator() {
                 <Send size={18} /> Send
               </motion.button>
             </motion.form>
+            {/* IMAGE LOGO HERE*/}
+            <div className="absolute inset-0 flex items-center justify-end pointer-events-none">
+              <div className="flex flex-col">
+                <Image 
+                  src={Logo}
+                  alt="mydogateit logo" 
+                  width={200} 
+                  height={200}
+                  className="w-full h-full mb-4 mt-96"
+                />
+                
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
